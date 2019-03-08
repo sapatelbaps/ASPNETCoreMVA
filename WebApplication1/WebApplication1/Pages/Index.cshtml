@@ -4,7 +4,30 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form method="post">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var customer in Model.Customers)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Name</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@customer.Id">Edit</a>
+                </td>
+                <td>
+                    <button type="submit" asp-route-id="@customer.Id" asp-page-handler="delete">Delete</button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <a asp-page="./Create">Create</a>
+</form>
