@@ -1,4 +1,5 @@
 ﻿@page
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -8,3 +9,7 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<h4>This is my computer name: @Configuration["computername"]</h4>
+<h3>This is my secret key: @Configuration["SomeProperty"]</h3>
+
