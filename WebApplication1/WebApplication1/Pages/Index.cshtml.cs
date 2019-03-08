@@ -12,6 +12,9 @@ namespace WebApplication1.Pages
     {
         private readonly AppDbContext _db;
 
+        [TempData]
+        public string Message { get; set; }
+
         public IndexModel(AppDbContext db)
         {
             this._db = db;

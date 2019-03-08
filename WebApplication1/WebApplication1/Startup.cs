@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace WebApplication1
 {
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Logging;
 
     public class Startup
     {
@@ -28,14 +29,17 @@ namespace WebApplication1
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddLogging();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("name"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddConsole();
+            loggerFactory.AddDebug();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
