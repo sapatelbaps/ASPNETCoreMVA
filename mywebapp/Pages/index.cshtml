@@ -1,9 +1,14 @@
 @page
-
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
 <h1>SwamiShriji</h1>
 <p>
     @{
-        var i = 2+2;        
+        var i = 2+2;
     }
 </p>
 <h3>Current number is @i.</h3>
+
+<h2>
+@Configuration["Message"]
+</h2>
