@@ -40,7 +40,7 @@ namespace WebApplication24
                     Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<IdentityUser, IdentityRole>()
-                // services.AddDefaultIdentity<IdentityUser>()
+                        // services.AddDefaultIdentity<IdentityUser>()
                         .AddEntityFrameworkStores<ApplicationDbContext>();
 
 
@@ -61,6 +61,11 @@ namespace WebApplication24
 
             // using Microsoft.AspNetCore.Identity.UI.Services;
             services.AddSingleton<IEmailSender, EmailSender>();
+
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AutomaticAuthentication = false;
+            });
 
         }
 
