@@ -62,11 +62,6 @@ namespace WebApplication24
             // using Microsoft.AspNetCore.Identity.UI.Services;
             services.AddSingleton<IEmailSender, EmailSender>();
 
-            services.Configure<IISServerOptions>(options =>
-            {
-                options.AutomaticAuthentication = false;
-            });
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
