@@ -4,6 +4,9 @@
 >> "dotnet new console" command to create a console applicaiton project  
 >> EFCore Migration in the code using EF Core.
 >> Developed models and setup database every time we run the program and display the data on console.
+>> But Unfortunately its not working as well as there is data only in the "Themes" table and not in 
+>> "Blogs" or "Posts" tables to showcase to user. Need to fix the issue and add some seed data in 
+>> all the tables.
 * **MyWebApp**
 >> Added default .net core 2.2 website with no authentication to practice Azure deployment 
 >> directly from VS 2019. 
