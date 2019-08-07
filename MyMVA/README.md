@@ -29,4 +29,14 @@
 * **WebApplication24** 
 >>RepeatTagHelper class in .NET Core web application.  
 >>Design custom tag to be used in "index.cshtml" and implement its code behind in the .cs file.  
->>Trying to add QRCode package for two factor authentication. Still in progress..
+>>Trying to add QRCode package for two factor authentication. Still in progress..  
+* **BookStore**  
+>>https://devblogs.microsoft.com/odata/asp-net-core-odata-now-available/  
+>>Demo application to show OData capabilities in dot net core web API.  
+>>OData automatically provides features on get resultset like  
+>>Cout, OrderBy, Filter, Sort, Top, Expand reference/related entities etc.  
+>>There is one video also available which shows how to enable OData using just four lines of code in your Web API.  
+>>https://www.youtube.com/watch?v=ZCDWUBOJ5FU  
+>>Nuget packages in above article seems outdated so, new link  
+>>https://medium.com/@abhi.bansal08/why-odata-and-how-to-enable-odata-in-c-net-core-application-1f13ad6ca3d1  
+>>
