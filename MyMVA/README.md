@@ -36,6 +36,8 @@
 >>OData automatically provides features on get resultset like  
 >>Cout, OrderBy, Filter, Sort, Top, Expand reference/related entities etc.  
 >>There is one video also available which shows how to enable OData using just four lines of code in your Web API.  
+>>https://devblogs.microsoft.com/odata/supercharging-asp-net-core-api-with-odata/  
+>>Above article code might work but yet not added in this solution.  
 >>https://www.youtube.com/watch?v=ZCDWUBOJ5FU  
 >>Nuget packages in above article seems outdated so, new link  
 >>https://medium.com/@abhi.bansal08/why-odata-and-how-to-enable-odata-in-c-net-core-application-1f13ad6ca3d1  
