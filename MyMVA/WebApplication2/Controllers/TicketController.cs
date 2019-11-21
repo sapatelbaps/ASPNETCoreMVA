@@ -25,6 +25,12 @@ namespace WebApplication2.Controllers
             }
         }
 
+	[HttpGet]
+        public IActionResult Test()
+        {
+            return new ObjectResult("SwamiShriji");
+        }
+
         [HttpGet]
         public IEnumerable<TicketItem> GetAll()
         {
