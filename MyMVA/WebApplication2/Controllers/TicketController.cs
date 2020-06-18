@@ -25,7 +25,7 @@ namespace WebApplication2.Controllers
             }
         }
 
-	[HttpGet]
+        [HttpGet]
         public IActionResult Test()
         {
             return new ObjectResult("SwamiShriji");
